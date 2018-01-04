@@ -91,7 +91,8 @@ Then:
 创建另一个应用的微信支付实例，可创建与同一个微信支付商户绑定的多个应用的实例
 
 ```js
-const params = this.app.wechatPay.newApp('wx2...').requestPayment(order)
+const params = this.app.wechatPay.newApp('wx2...')
+.requestPayment(order)
 ```
 
 ## License
