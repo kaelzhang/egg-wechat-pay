@@ -1,0 +1,52 @@
+{
+  "name": "egg-wechat-pay",
+  "version": "1.0.0",
+  "description": "Wechat pay plugin for egg.",
+  "files": [
+    "lib/",
+    "agent.js",
+    "app.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/kaelzhang/egg-wechat-pay.git"
+  },
+  "author": "kaelzhang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kaelzhang/egg-wechat-pay/issues"
+  },
+  "dependencies": {
+    "wechat-pay": "^0.3.2"
+  },
+  "devDependencies": {
+    "autod": "^2.7.1",
+    "egg": "^1.0.0-rc.2",
+    "egg-bin": "^2.2.3",
+    "egg-ci": "^1.3.0",
+    "egg-mock": "^3.0.1",
+    "supertest": "^3.0.0",
+    "utility": "^1.11.0"
+  },
+  "eggPlugin": {
+    "name": "wechatPay"
+  },
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "keywords": [
+    "egg",
+    "eggPlugin",
+    "egg-plugin",
+    "wechat",
+    "wechat-pay"
+  ],
+  "scripts": {
+    "autod": "autod",
+    "ci": "npm run lint && npm run cov",
+    "cov": "egg-bin cov",
+    "lint": "eslint .",
+    "test": "npm run lint -- --fix && npm run test-local",
+    "test-local": "egg-bin test"
+  }
+}
