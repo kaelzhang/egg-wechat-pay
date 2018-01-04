@@ -11,12 +11,13 @@ class WechatPayBase {
 
   requestPayment ({
     body,
+    spbill_create_ip,
     ip,
     ...others
   }) {
     return this._payment.getBrandWCPayRequestParams({
       body: this._handleBody(body),
-      spbill_create_ip: ip,
+      spbill_create_ip: ip || spbill_create_ip,
       ...others
     })
   }
