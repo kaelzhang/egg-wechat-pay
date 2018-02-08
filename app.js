@@ -31,14 +31,14 @@ class WechatPayBase {
   }
 
   fail (ctx, return_msg) {
-    ctx.body = this.xmlStringify({
+    ctx.body = this.stringify({
       return_code: 'FAIL',
       return_msg
     })
   }
 
   success (ctx) {
-    ctx.body = this.xmlStringify({
+    ctx.body = this.stringify({
       return_code: 'SUCCESS'
     })
   }
