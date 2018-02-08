@@ -99,6 +99,8 @@ const params = this.app.wechatPay.newApp('wx2...')
 
 将微信支付通知中的 `return_msg`(XML) 转换为 JavaScript 对象。XML 通知的结构见 [这个文档](https://pay.weixin.qq.com/wiki/doc/api/wxa/wxa_api.php?chapter=9_7)。
 
+这个方法在转换的过程中，还会结合 [`config.wechatPay.client`](#configwechatpayclient) 校验 XML 是否有效，否则会 reject。
+
 返回 `Object`
 
 ### wechatPay.stringify(object)
