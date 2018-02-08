@@ -95,6 +95,31 @@ const params = this.app.wechatPay.newApp('wx2...')
 .requestPayment(order)
 ```
 
+### await wechatPay.parse(xml)
+
+将微信支付通知中的 `return_msg`(XML) 转换为 JavaScript 对象。XML 通知的结构见 [这个文档](https://pay.weixin.qq.com/wiki/doc/api/wxa/wxa_api.php?chapter=9_7)。
+
+返回 `Object`
+
+### wechatPay.stringify(object)
+
+将 JavaScript 转换为 XML 文本
+
+返回 `String`
+
+### wechatPay.success(ctx)
+
+- **ctx** `EggContext`
+
+向微信返回成功响应
+
+### wechatPay.success(ctx, message)
+
+- **ctx** `EggContext`
+- **message** `String` 作为 `return_msg` 的值
+
+向微信返回失败的响应
+
 ## License
 
 MIT

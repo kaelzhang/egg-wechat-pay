@@ -37,7 +37,9 @@
     "eggPlugin",
     "egg-plugin",
     "wechat",
-    "wechat-pay"
+    "wechat-pay",
+    "notification",
+    "xml"
   ],
   "scripts": {
     "autod": "autod",

@@ -22,6 +22,27 @@ class WechatPayBase {
     })
   }
 
+  parse (xml) {
+    return this._payment.validate(xml)
+  }
+
+  stringify (obj) {
+    return this._payment.buildXml(obj)
+  }
+
+  fail (ctx, return_msg) {
+    ctx.body = this.xmlStringify({
+      return_code: 'FAIL',
+      return_msg
+    })
+  }
+
+  success (ctx) {
+    ctx.body = this.xmlStringify({
+      return_code: 'SUCCESS'
+    })
+  }
+
   _handleBody (body) {
     const prefix = this._options.bodyPrefix
     if (!prefix) {
