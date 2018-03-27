@@ -20,7 +20,7 @@ Wechat pay plugin for egg.
 ## Install
 
 ```sh
-$ npm install egg-wechat-pay
+$ npm i egg-wechat-pay
 ```
 
 ## Configurations
@@ -76,7 +76,7 @@ Then:
 - **merchantId** `String` 微信商户号，即 `mch_id`
 - **secret** `String` 微信支付的 API 密钥，请到 "微信支付|商户平台 -> API安全" 页面获取
 - **notifyUrl** `URL` 接收微信支付异步通知回调地址，通知url必须为直接可访问的url，不能携带参数
-- **pfx** `Buffer` 微信支付 API 证书（p12证书）
+- **pfx** `Buffer | String` 微信支付 API 证书（p12证书）
 
 ### await wechatPay.requestPayment(order)
 
@@ -85,6 +85,21 @@ Then:
   - 其他参数
 
 返回[再次签名](https://pay.weixin.qq.com/wiki/doc/api/wxa/wxa_api.php?chapter=7_7&index=3)的回调结果，该结果可以直接被小程序，JSBridge，或客户端调用。
+
+```js
+const payment = await wechatPay.requestPayment(order)
+
+// https://mp.weixin.qq.com/debug/wxadoc/dev/api/api-pay.html#wxrequestpaymentobject
+wx.requestPayment({
+  ...payment,
+  success (res) {
+
+  },
+  fail (res) {
+
+  }
+})
+```
 
 ### wechatPay.newApp(appId)
 
