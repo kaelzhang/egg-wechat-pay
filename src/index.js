@@ -143,6 +143,9 @@ class WechatPayBase {
 
 delegates(WechatPayBase.prototype, '_payment')
 .method('refund')
+.method('refundQuery')
+.method('closeOrder')
+.method('orderQuery')
 .method('sendRedPacket')
 .method('redPacketQuery')
 .method('transfers')

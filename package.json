@@ -1,6 +1,6 @@
 {
   "name": "egg-wechat-pay",
-  "version": "2.1.1",
+  "version": "2.2.0",
   "description": "Wechat pay plugin for egg.",
   "files": [
     "app.js",
