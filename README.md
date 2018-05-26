@@ -130,7 +130,7 @@ const params = this.app.wechatPay.newApp('wx2...')
 
 向微信返回成功响应
 
-### wechatPay.success(ctx, message)
+### wechatPay.fail(ctx, message)
 
 - **ctx** `EggContext`
 - **message** `String` 作为 `return_msg` 的值
